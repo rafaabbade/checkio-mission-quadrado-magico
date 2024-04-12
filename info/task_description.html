@@ -1,18 +1,25 @@
 <!-- Describe task in general -->
 
 <p>
-    {{ENUNCIADO}}
+    Em um Quadrado Mágico, a soma de qualquer coluna, linha ou diagonal tem sempre o mesmo valor,
+e nenhum número aparece mais do que uma vez.</p>
+<img  title="example" src="{{MEDIA}}quadrado-magico.png" alt="example" style="max-height: 300px"/>
+
+<p>A dimensão de um quadrado mágico é o número de colunas (ou de linhas, já que o número de colunas é igual ao número de linhas).</p>
+<p>Rita encontrou um caderno antigo de sua avó, repleto de quadrados mágicos de todas as dimensões. Infelizmente alguns dos números estão ilegíveis. Você pode ajudá-la?</p>
+<p>Dado um quadrado mágico com exatamente um número ilegível, determine o valor e a posição desse número.
 </p>
 
 
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Entrada </strong> {{ENTRADA}}
+    <strong>Entrada </strong> Um inteiro N, que é a dimensão do quadrado mágico. Uma lista que contém outras lista que representam as células de cada linha do quadrado mágico. Um desses inteiros será zero, indicando o número ilegível.
 </p>
 
 <p>
-    <strong>Saída: </strong> {{SAIDA}}
+    <strong>Saída: </strong> Três inteiros, sendo valor do número ilegível,  o número da linha onde o número ilegível está localizado, o número da coluna onde o número ilegível está localizado.
+
 </p>
 
 
@@ -28,7 +35,11 @@ countConsecutiveSummers(99) == 6
 </pre>
 {% else %}
 <pre class="brush: python">
-    {{EXEMPLOS}}
+    encontrar_numero_ilegivel(3, [[2, 9, 4], [7, 0, 3], [6, 1, 8]]) >> (5, 2, 2)
+encontrar_numero_ilegivel(4, [[11, 8, 5, 0], [14, 1, 4, 15], [2, 13, 16, 3], [7, 12, 9, 6]]) >> (10, 1, 4)
+encontrar_numero_ilegivel(3, [[4, 9, 2], [3, 5, 7], [8, 1, 0]]) >> (6, 3, 3)
+encontrar_numero_ilegivel(3, [[0, 7, 6], [9, 5, 1], [2, 11, 3]]) >> (8, 1, 1)
+encontrar_numero_ilegivel(4, [[16, 3, 2, 13], [5, 10, 11, 8], [9, 6, 7, 12], [4, 15, 14, 0]]) >> (1, 4, 4)
 </pre>
 {% endif %}
 </div>
